@@ -1,0 +1,43 @@
+@function Grad($clr1, $clr2, $endClr1: 0%, $endClr2: 100%, $rot: 45deg) {
+    @return #{"linear-gradient(" + $rot + "," + $clr1 + " " + $endClr1 + "," + $clr2 + " " + $endClr2 + ")"};
+}
+
+
+$FA: "Font Awesome 5 Free";
+
+$yellow: #ffcc00;
+$black: #100f10; 
+$red: #eea366;
+$purp: #5e2abe;
+$trans: transparent;
+
+$colors: (
+    "yellow": $yellow,
+    "black": $black,
+    "red": $red,
+    "purp": $purp,
+    "trans": $trans,
+);
+$breakpoints-class: ("", "-xxs", "-xs", "-sm", "-md", "-lg", "-xl");
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+    (
+        0: 0,
+        1: (
+            $spacer * 0.25
+        ),
+        2: (
+            $spacer * 0.5
+        ),
+        3: $spacer,
+        4: (
+            $spacer * 1.5
+        ),
+        5: (
+            $spacer * 3
+        )
+    ),
+    $spacers
+);
+$imgPath: "../images/";

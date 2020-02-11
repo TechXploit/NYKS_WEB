@@ -1,0 +1,39 @@
+.btn-gradient {
+  background: linear-gradient(45deg,#5e2abe 0%,#eea366 100%);
+}
+
+.input-gradient.MuiFormControl-root {
+  background: linear-gradient(90deg,#5e2abe 0%,#eea366 100%);
+  padding: 2px;
+  margin-top: 16px;
+  border-radius: 4px;
+}
+
+.input-gradient label {
+  padding: 2px 10px;
+  margin-top: -1px;
+}
+
+.input-gradient label.Mui-focused {
+  color: #5e2abe;
+  margin-top: 1px;
+  background: white;
+}
+
+.input-gradient .MuiOutlinedInput-root {
+  border-radius: 3px;
+}
+
+.input-gradient .MuiOutlinedInput-root fieldset {
+  border-color: transparent;
+  background: white;
+}
+
+.input-gradient .MuiOutlinedInput-root:hover fieldset {
+  border-color: transparent;
+}
+
+.input-gradient .MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: transparent;
+}
+

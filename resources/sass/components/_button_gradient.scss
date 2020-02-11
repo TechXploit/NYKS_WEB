@@ -1,0 +1,5 @@
+.btn {
+    &-gradient {
+        @include gradient-bg($purp, $red);
+    }
+}
