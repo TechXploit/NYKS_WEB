@@ -1,17 +1,20 @@
 .input-gradient {
     &.MuiFormControl-root {
-        @include gradient-bg($purp, $red,$rot:90deg);
+        @include gradient-bg($purp, $red,$rot:-90deg);
+        // background: #00c650;
         padding: 2px;
         margin-top: 16px;
         border-radius: 4px;
     }
     label {
         padding: 2px 10px;
-        margin-top: -1px;
+        // margin-top: -1px;
+        background: #fff;
     }
     label.Mui-focused {
-        color: $purp;   
-        margin-top: 1px;
+        // color: $purp;   
+        color: $red;   
+        // margin-top: 1px;
         background: white;
     }
 
@@ -21,6 +24,7 @@
         fieldset {
             border-color: transparent;
             background: white;
+            z-index: -1;
         }
         &:hover fieldset {
             border-color: transparent;

@@ -1,5 +1,9 @@
 .btn {
     &-gradient {
-        @include gradient-bg($purp, $red);
+        @include gradient-bg($purp, $red,$rot:-90deg);
+        // background-color: #00d656;
+        &.MuiButton-root.Mui-disabled {
+            background: #ddd;
+        }
     }
 }

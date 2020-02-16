@@ -1,9 +1,31 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .btn-gradient {
-  background: linear-gradient(45deg,#5e2abe 0%,#eea366 100%);
+  background: linear-gradient(-90deg,#3f00ff 0%,#FF2C78 100%);
+}
+
+.btn-gradient.MuiButton-root.Mui-disabled {
+  background: #ddd;
 }
 
 .input-gradient.MuiFormControl-root {
-  background: linear-gradient(90deg,#5e2abe 0%,#eea366 100%);
+  background: linear-gradient(-90deg,#3f00ff 0%,#FF2C78 100%);
   padding: 2px;
   margin-top: 16px;
   border-radius: 4px;
@@ -11,12 +33,11 @@
 
 .input-gradient label {
   padding: 2px 10px;
-  margin-top: -1px;
+  background: #fff;
 }
 
 .input-gradient label.Mui-focused {
-  color: #5e2abe;
-  margin-top: 1px;
+  color: #FF2C78;
   background: white;
 }
 
@@ -27,6 +48,7 @@
 .input-gradient .MuiOutlinedInput-root fieldset {
   border-color: transparent;
   background: white;
+  z-index: -1;
 }
 
 .input-gradient .MuiOutlinedInput-root:hover fieldset {
