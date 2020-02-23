@@ -106371,8 +106371,8 @@ var theme = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_0__["create
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! H:\DATA\Htmls\WEBSITES\Originals\NYKS_WEB\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! H:\DATA\Htmls\WEBSITES\Originals\NYKS_WEB\resources\sass\main.scss */"./resources/sass/main.scss");
+__webpack_require__(/*! C:\Users\SUBHRA\Desktop\NYKS\NYKS_BACKEND\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\SUBHRA\Desktop\NYKS\NYKS_BACKEND\resources\sass\main.scss */"./resources/sass/main.scss");
 
 
 /***/ })
