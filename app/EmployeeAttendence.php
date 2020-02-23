@@ -9,7 +9,7 @@ class EmployeeAttendence extends Model
     protected $fillable = [
         'emp_gen_id',
         'date',
-        'start_time',
+        'start_time', 
         'end_time',
         'approved_by',
         'approved_at',
