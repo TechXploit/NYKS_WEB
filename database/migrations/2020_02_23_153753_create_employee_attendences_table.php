@@ -24,7 +24,6 @@ class CreateEmployeeAttendencesTable extends Migration
             $table->timestamps('approved_at');
             $table->boolean('approval_status');
             $table->integer('voluntary_leaves');
-            
             $table->timestamps();
         });
     }

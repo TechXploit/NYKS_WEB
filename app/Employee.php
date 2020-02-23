@@ -13,6 +13,7 @@ class Employee extends Model
         'phone',
         'work_hour_start_at',
         'work_hour_end_at',
+        'alarm_time',
         'voice_token',
         'face_token',
         'face_img_url',
