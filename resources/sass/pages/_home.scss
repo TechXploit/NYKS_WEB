@@ -1,0 +1,8 @@
+#app {
+    overflow-x: hidden;
+}
+.dashboard {
+    &-content {
+        padding: 16px;
+    }
+}
