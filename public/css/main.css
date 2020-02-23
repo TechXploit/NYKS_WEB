@@ -59,3 +59,11 @@ body {
   border-color: transparent;
 }
 
+#app {
+  overflow-x: hidden;
+}
+
+.dashboard-content {
+  padding: 16px;
+}
+

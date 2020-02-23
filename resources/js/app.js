@@ -13,3 +13,5 @@ require('./bootstrap');
  */
 
 require('./components/Layout');
+
+var Color = require('color');
