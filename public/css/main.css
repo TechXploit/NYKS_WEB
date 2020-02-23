@@ -59,6 +59,31 @@ body {
   border-color: transparent;
 }
 
+.input-select.MuiOutlinedInput-root {
+  background: linear-gradient(-90deg,#3f00ff 0%,#FF2C78 100%);
+  padding: 2px;
+  margin-top: 16px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.input-select.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: transparent;
+}
+
+.input-select.MuiOutlinedInput-root .MuiSelect-outlined {
+  background: #fff;
+  border-radius: 3px;
+}
+
+.input-select.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: transparent;
+}
+
+.input-select .MuiInputLabel-filled {
+  background: #fff;
+}
+
 #app {
   overflow-x: hidden;
 }

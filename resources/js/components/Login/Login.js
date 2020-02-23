@@ -40,7 +40,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default function SignIn() {
+export default function Login() {
     const classes = useStyles();
 
     return (
@@ -60,7 +60,7 @@ export default function SignIn() {
                     />
                     <InputGradient
                         required
-                        fullWidth
+                        fullWidth 
                         name="password"
                         label="Password"
                         // type="password"

@@ -1,0 +1,25 @@
+.input-select{
+    &.MuiOutlinedInput-root{
+        @include gradient-bg($purp, $red,$rot:-90deg);
+
+        padding: 2px;
+        margin-top: 16px;
+        border-radius: 4px;
+        width: 100%;
+        &:hover{
+            .MuiOutlinedInput-notchedOutline{
+                border-color: transparent;
+            }
+        }
+        .MuiSelect-outlined {
+            background: #fff;
+            border-radius: 3px;
+        }
+        &.Mui-focused .MuiOutlinedInput-notchedOutline{
+            border-color: transparent;
+        }
+    }
+    .MuiInputLabel-filled{
+        background: #fff;
+    }
+}

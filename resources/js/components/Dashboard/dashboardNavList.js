@@ -38,7 +38,15 @@ export const dashboardList = (
             <ListItemText primary="Give Attendence" />
         </ListItem>
 
-        <ListItem button component={Link} to="/dashboard/attendance">
+        <ListItem button component={Link} to="/register">
+            <ListItemIcon>
+                <AddBoxIcon />
+            </ListItemIcon>
+            <ListItemText primary="Register" />
+        </ListItem>
+
+
+        <ListItem button component={Link} to="/register">
             <ListItemIcon>
                 <AddBoxIcon />
             </ListItemIcon>
