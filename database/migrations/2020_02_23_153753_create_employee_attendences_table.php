@@ -18,10 +18,10 @@ class CreateEmployeeAttendencesTable extends Migration
         
             $table->string('emp_gen_id');
             $table->date('date');
-            $table->timestamps('start_time');
-            $table->timestamps('end_time');
+            $table->time('start_time');
+            $table->time('end_time');
             $table->char('approved_by');
-            $table->timestamps('approved_at');
+            $table->time('approved_at');
             $table->boolean('approval_status');
             $table->integer('voluntary_leaves');
             $table->timestamps();
