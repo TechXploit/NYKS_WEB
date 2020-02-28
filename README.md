@@ -16,6 +16,8 @@ After Cloning this repo, run the following cmds inside your local project direct
 
 `yarn install`
 
+You need to run the above cmds everytime you **pull** the repo.
+
 Then run dev servers in two seprate terminals, by following cmds:
 
 `php artisan serve`
