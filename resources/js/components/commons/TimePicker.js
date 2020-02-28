@@ -12,18 +12,20 @@ import clsx from 'clsx';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: "100%"
+    width: "100%",
+    "& .MuiInput-underline": {
+      "&:after": {
+        borderBottom: "none",
+        height: 2,
+        background: ('linear-gradient(90deg,'
+          + theme.palette.primary.main
+          + ' 0%,'
+          + theme.palette.secondary.main
+          + ' 100%)')
+      }
+    },
   },
-  "MuiInput-underline": {
-    "&:after": {
-      borderColor: "transparent",
-      background: ('linear-gradient(90deg,'
-        + theme.palette.primary.main
-        + ' 0%,'
-        + theme.palette.secondary.main
-        + ' 100%)')
-    }
-  }
+
 }));
 
 
@@ -49,7 +51,7 @@ export default function MaterialUIPickers(props) {
           KeyboardButtonProps={{
             'aria-label': 'change time',
           }}
-          className={clsx(classes.root, classes["MuiInput-underline"])}
+          className={classes.root}
         />
       </Grid>
     </MuiPickersUtilsProvider>
