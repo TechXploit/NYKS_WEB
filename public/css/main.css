@@ -24,6 +24,38 @@ body {
   background: #ddd;
 }
 
+.input-error.MuiFormControl-root {
+  margin-top: 16px;
+}
+
+.input-error label {
+  padding: 2px 10px;
+  background: #fff;
+}
+
+.input-error label.Mui-focused {
+  color: #ff1800;
+  background: white;
+}
+
+.input-error .MuiOutlinedInput-root {
+  border-radius: 3px;
+}
+
+.input-error .MuiOutlinedInput-root fieldset {
+  border-color: #ff1800;
+  background: white;
+  z-index: -1;
+}
+
+.input-error .MuiOutlinedInput-root:hover fieldset {
+  border-color: #ff1800;
+}
+
+.input-error .MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: #ff1800;
+}
+
 .input-gradient.MuiFormControl-root {
   background: linear-gradient(-90deg,#3f00ff 0%,#FF2C78 100%);
   padding: 2px;

@@ -19,7 +19,7 @@ import TimePicker from '../commons/TimePicker';
 
 const useStyles = makeStyles(theme => ({
     paper: {
-        marginTop: theme.spacing(15),
+        margin: theme.spacing(15, 0),
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -45,6 +45,95 @@ const useStyles = makeStyles(theme => ({
 export default function Register() {
     const classes = useStyles();
 
+    //  Text Box Hooks
+    const [name, nameInput] = InputGradient({
+        required: true,
+        fullWidth: true,
+        id: 'name',
+        label: "Name",
+        autoComplete: "off"
+    });
+    const [email, emailInput] = InputGradient({
+        type: 'email',
+        required: true,
+        fullWidth: true,
+        id: 'email',
+        label: "Email Address",
+        autoComplete: "off"
+    });
+
+    const [password, passwordInput] = InputGradient({
+        type: 'password',
+        required: true,
+        fullWidth: true,
+        id: "password",
+        label: "Password",
+        autoComplete: "off"
+    });
+
+    const [confirm_password, confirm_passwordInput] = InputGradient({
+        type: 'password',
+        required: true,
+        fullWidth: true,
+        id: "confirm_password",
+        label: "Confirm Password",
+        autoComplete: "off"
+    });
+
+
+    const [phone, phoneInput] = InputGradient({
+        type: 'number',
+        required: true,
+        fullWidth: true,
+        id: "phone",
+        label: "Phone",
+        autoComplete: "off",
+    });
+    //  Select Component Hooks
+    const [department, departmentInput] = SelectGradient({
+        type: 'number',
+        required: true,
+        fullWidth: true,
+        id: "department",
+        myLabel: "Select Department",
+        autoComplete: "off",
+        selectItems: [
+            { id: 1, value: "IT" },
+            { id: 2, value: "System Analyst" },
+            { id: 3, value: "Design" },
+            { id: 4, value: "Marketing" },
+        ],
+    });
+    const [designation, designationInput] = SelectGradient({
+        type: 'number',
+        required: true,
+        fullWidth: true,
+        id: "designation",
+        myLabel: "Select Designation",
+        autoComplete: "off",
+        selectItems: [
+            { id: 1, value: "IT" },
+            { id: 2, value: "System Analyst" },
+            { id: 3, value: "Design" },
+            { id: 4, value: "Marketing" },
+        ],
+    });
+
+    // Time Picker Hooks
+
+
+    const [startTime, startTimeInput] = TimePicker({
+        id: "startTime",
+        label: "Start time",
+    });
+    const [endTime, endTimeInput] = TimePicker({
+        id: "endTime",
+        label: "End time",
+    });
+
+
+    const data = [name, phone, email, department, designation, password, confirm_password, startTime, endTime];
+    console.log(data)
     return (
         <Container component="main" maxWidth="xs">
             <div className={classes.paper}>
@@ -52,89 +141,18 @@ export default function Register() {
                     Sign Up
                 </Typography>
                 <form className={classes.form} noValidate>
-                    <InputGradient
-                        required
-                        fullWidth
-                        id="name"
-                        label="Name"
-                        name="name"
-                        autoComplete="off"
-                    />
+                    {nameInput}
+                    {phoneInput}
+                    {emailInput}
+                    {passwordInput}
+                    {confirm_passwordInput}
+                    {departmentInput}
+                    {designationInput}
+                    {startTimeInput}
+                    {endTimeInput}
 
-                    <InputGradient
-                        required
-                        fullWidth
-                        id="email"
-                        label="Email Address"
-                        name="email"
-                        autoComplete="off"
-                    />
-
-                    <InputGradient
-                        required
-                        fullWidth
-                        id="Phone"
-                        label="Phone"
-                        name="Phone"
-                        autoComplete="off"
-                    />
-
-                    <SelectGradient
-                        required
-                        fullWidth
-                        id="department"
-                        myLabel="Select Department"
-                        name="Department"
-                        autoComplete="off"
-                        selectItems={[
-                            { id: 1, value: "IT" },
-                            { id: 2, value: "System Analyst" },
-                            { id: 3, value: "Design" },
-                            { id: 4, value: "Marketing" },
-                        ]}
-                    />
-
-                    <SelectGradient
-                        required
-                        fullWidth
-                        id="designation"
-                        myLabel="Select Designation"
-                        name="Designation"
-                        autoComplete="off"
-                        selectItems={[
-                            { id: 1, value: "IT" },
-                            { id: 2, value: "System Analyst" },
-                            { id: 3, value: "Design" },
-                            { id: 4, value: "Marketing" },
-                        ]}
-                    />
-                    <TimePicker
-                        label="Start time"
-                    />
-                    <TimePicker
-                        label="End time"
-                    />
-                    <InputGradient
-                        required
-                        fullWidth
-                        name="Createpassword"
-                        label="Create Password"
-                        // type="password"
-                        id="Createpassword"
-                        autoComplete="current-password"
-                    />
-                    <InputGradient
-                        required
-                        fullWidth
-                        name="confirmpassword"
-                        label="Confirm Password"
-                        // type="password"
-                        id="Confirm password"
-                        autoComplete="current-password"
-                    />
 
                     <ButtonGradient
-                        // disabled
                         fullWidth
                         className={classes.submit}
                         onClick={function () {

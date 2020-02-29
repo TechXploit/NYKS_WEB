@@ -29,25 +29,20 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-export default function MaterialUIPickers(props) {
-  // The first commit of Material-UI
+export default function TimePicker(props) {
   const classes = useStyles();
-  const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
-  const { label } = props
+  const [selectedDate, setSelectedDate] = React.useState(new Date());
 
-  const handleDateChange = date => {
-    setSelectedDate(date);
-  };
-
-  return (
+  const { label, id, className } = props
+  const picker = (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
       <Grid>
         <KeyboardTimePicker
           margin="normal"
-          id="time-picker"
+          id={id || "time-picker"}
           label={label || "TimePicker"}
           value={selectedDate}
-          onChange={handleDateChange}
+          onChange={function (date) { return setSelectedDate(date); }}
           KeyboardButtonProps={{
             'aria-label': 'change time',
           }}
@@ -56,4 +51,6 @@ export default function MaterialUIPickers(props) {
       </Grid>
     </MuiPickersUtilsProvider>
   );
+
+  return [selectedDate, picker];
 }
