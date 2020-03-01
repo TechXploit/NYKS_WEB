@@ -7,7 +7,7 @@ import { withStyles } from '@material-ui/core/styles';
 import styled from 'styled-components';
 function InputGradient(props) {
 
-    const { classes, id, className, label, error, ...others } = props;
+    const { classes, id, className, label, error, disabled, ...others } = props;
 
     const [value, setValue] = useState("");
 
@@ -16,11 +16,11 @@ function InputGradient(props) {
             <TextField
                 value={value}
                 onChange={function (e) { setValue(e.target.value) }}
-                className={clsx(className, { "input-gradient": (!error), "input-error": (error) })}
+                className={clsx({ "input-gradient": (!error), "input-error": (error), "input-disabled": (disabled) }, className)}
                 label={label || "Placeholder"}
                 variant="outlined"
                 id={id}
-
+                disabled={disabled}
                 {...others}
             />
         </FormControl>

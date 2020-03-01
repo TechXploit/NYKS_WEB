@@ -13,11 +13,12 @@ class CreateDesignationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('designations', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->char('designation_name');
-            $table->timestamps();
-        });
+        Schema::create('designations', function(Blueprint $table) {
+			$table->bigIncrements('id');
+			$table->char('designation_name');
+			$table->bigInteger('emp_id')->unsigned();
+			$table->timestamps();
+		});
     }
 
     /**

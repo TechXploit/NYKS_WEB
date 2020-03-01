@@ -35,10 +35,19 @@ const useStyles = makeStyles(theme => ({
         margin: theme.spacing(1, 0, 2),
     },
     spacingRow: {
-        marginTop: theme.spacing(1),
+        marginTop: theme.spacing(2),
     },
     forgotPassword: {
         verticalAlign: "middle"
+    },
+    otpSendBtn: {
+        height: "100%",
+        margin: 0,
+        borderTopLeftRadius: 0,
+        borderBottomLeftRadius: 0,
+    },
+    otpSendInput: {
+        marginTop: 0,
     }
 }));
 
@@ -80,7 +89,6 @@ export default function Register() {
         autoComplete: "off"
     });
 
-
     const [phone, phoneInput] = InputGradient({
         type: 'number',
         required: true,
@@ -89,6 +97,22 @@ export default function Register() {
         label: "Phone",
         autoComplete: "off",
     });
+
+    const [otp, otpInput] = InputGradient({
+        type: 'number',
+        required: true,
+        fullWidth: true,
+        id: "otp",
+        label: "Enter OTP",
+        autoComplete: "off",
+        style: {
+            marginTop: 0,
+            borderTopRightRadius: 0,
+            borderBottomRightRadius: 0,
+            paddingRight: 0
+        },
+    });
+
     //  Select Component Hooks
     const [department, departmentInput] = SelectGradient({
         type: 'number',
@@ -131,6 +155,42 @@ export default function Register() {
         label: "End time",
     });
 
+    // Office Hooks
+    const [street, streetInput] = InputGradient({
+        type: 'text',
+        required: true,
+        fullWidth: true,
+        id: "street",
+        label: "Street",
+        autoComplete: "off",
+    });
+
+
+    const [state, stateInput] = InputGradient({
+        type: 'text',
+        required: true,
+        fullWidth: true,
+        id: "state",
+        label: "State",
+        autoComplete: "off",
+    });
+
+    const [district, districtInput] = InputGradient({
+        type: 'text',
+        required: true,
+        fullWidth: true,
+        id: "district",
+        label: "District",
+        autoComplete: "off",
+    });
+    const [pincode, pincodeInput] = InputGradient({
+        type: 'number',
+        required: true,
+        fullWidth: true,
+        id: "pincode",
+        label: "Pincode",
+        autoComplete: "off",
+    });
 
     const data = [name, phone, email, department, designation, password, confirm_password, startTime, endTime];
     console.log(data)
@@ -143,14 +203,34 @@ export default function Register() {
                 <form className={classes.form} noValidate>
                     {nameInput}
                     {phoneInput}
+                    <Grid container className={classes.spacingRow}>
+                        <Grid item xs>
+                            {otpInput}
+                        </Grid>
+                        <Grid item >
+                            <ButtonGradient
+                                fullWidth
+                                className={classes.otpSendBtn}
+                                onClick={function () {
+                                    return console.log("Submitted")
+                                }}
+                                type="button"
+                            >
+                                Send
+                            </ButtonGradient>
+                        </Grid>
+                    </Grid>
                     {emailInput}
                     {passwordInput}
                     {confirm_passwordInput}
+                    {streetInput}
+                    {stateInput}
+                    {districtInput}
+                    {pincodeInput}
                     {departmentInput}
                     {designationInput}
                     {startTimeInput}
                     {endTimeInput}
-
 
                     <ButtonGradient
                         fullWidth

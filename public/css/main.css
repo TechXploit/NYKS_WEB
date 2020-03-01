@@ -63,6 +63,14 @@ body {
   border-radius: 4px;
 }
 
+.input-gradient.MuiFormControl-root.input-disabled {
+  background: #ccd;
+}
+
+.input-gradient.MuiFormControl-root .Mui-disabled fieldset {
+  border-color: transparent;
+}
+
 .input-gradient label {
   padding: 2px 10px;
   background: #fff;

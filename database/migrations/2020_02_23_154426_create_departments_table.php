@@ -13,11 +13,12 @@ class CreateDepartmentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('departments', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('dept_name');
-            $table->timestamps();
-        });
+        Schema::create('departments', function(Blueprint $table) {
+			$table->bigIncrements('id');
+			$table->string('dept_name');
+			$table->bigInteger('emp_id')->unsigned();
+			$table->timestamps();
+		});
     }
 
     /**
