@@ -38,7 +38,10 @@ const theme = createMuiTheme({
             disabled: "#ddd",
             hint: "rgba(0, 0, 0, 0.38)",
         },
-    },
+        background: {
+            default: "#fff"
+        }
+    }
 });
 export default theme;
 

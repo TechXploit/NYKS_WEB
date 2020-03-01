@@ -13,7 +13,6 @@ import NotFound from './commons/NotFound';
 import { dashboardList } from './Dashboard/dashboardNavList';
 
 export default function Layout() {
-    console.log("Layout")
     return (
         <ThemeProvider
             theme={theme}

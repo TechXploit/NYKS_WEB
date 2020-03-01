@@ -24,6 +24,38 @@ body {
   background: #ddd;
 }
 
+.input-error.MuiFormControl-root {
+  margin-top: 16px;
+}
+
+.input-error label {
+  padding: 2px 10px;
+  background: #fff;
+}
+
+.input-error label.Mui-focused {
+  color: #ff1800;
+  background: white;
+}
+
+.input-error .MuiOutlinedInput-root {
+  border-radius: 3px;
+}
+
+.input-error .MuiOutlinedInput-root fieldset {
+  border-color: #ff1800;
+  background: white;
+  z-index: -1;
+}
+
+.input-error .MuiOutlinedInput-root:hover fieldset {
+  border-color: #ff1800;
+}
+
+.input-error .MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: #ff1800;
+}
+
 .input-gradient.MuiFormControl-root {
   background: linear-gradient(-90deg,#3f00ff 0%,#FF2C78 100%);
   padding: 2px;
@@ -57,6 +89,31 @@ body {
 
 .input-gradient .MuiOutlinedInput-root.Mui-focused fieldset {
   border-color: transparent;
+}
+
+.input-select.MuiOutlinedInput-root {
+  background: linear-gradient(-90deg,#3f00ff 0%,#FF2C78 100%);
+  padding: 2px;
+  margin-top: 16px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.input-select.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: transparent;
+}
+
+.input-select.MuiOutlinedInput-root .MuiSelect-outlined {
+  background: #fff;
+  border-radius: 3px;
+}
+
+.input-select.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: transparent;
+}
+
+.input-select .MuiInputLabel-filled {
+  background: #fff;
 }
 
 #app {
